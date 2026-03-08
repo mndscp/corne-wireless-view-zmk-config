@@ -53,6 +53,26 @@
             bindings = <&kp ESCAPE>;
             key-positions = <14 15>;
         };
+
+        oe {
+            bindings = <&kp RA(O)>;
+            key-positions = <19 20>;
+        };
+
+        ue {
+            bindings = <&kp RA(U)>;
+            key-positions = <20 21>;
+        };
+
+        ae {
+            bindings = <&kp RA(A)>;
+            key-positions = <7 8>;
+        };
+
+        sz {
+            bindings = <&kp RA(S)>;
+            key-positions = <8 9>;
+        };
     };
 
     behaviors {

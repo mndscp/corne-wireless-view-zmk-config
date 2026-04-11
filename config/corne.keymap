@@ -78,6 +78,21 @@
             bindings = <&aeu>;
             key-positions = <7 8 9>;
         };
+
+        pasteenter {
+            bindings = <&pasteenter>;
+            key-positions = <28 38>;
+        };
+
+        pasteall {
+            bindings = <&pasteall>;
+            key-positions = <28 29>;
+        };
+
+        pasteallenter {
+            bindings = <&pasteallenter>;
+            key-positions = <29 38>;
+        };
     };
 
     behaviors {
@@ -192,6 +207,27 @@
             bindings = <&kp RA(A) &kp U>;
             label = "AEU";
         };
+
+        pasteall: pasteall {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LC(V)>;
+            label = "PASTEALL";
+        };
+
+        pasteenter: pasteenter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V) &kp ENTER>;
+            label = "PASTEENTER";
+        };
+
+        pasteallenter: pasteallenter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LC(V) &kp ENTER>;
+            label = "PASTEALLENTER";
+        };
     };
 
     keymap {
@@ -202,7 +238,7 @@
 &lt 3 TAB     &kp Q            &kp W            &num 2 E      &kp R               &kp T          &kp Y        &kp U                &num 2 I      &kp O            &kp P               &kp BSPC
 &lt 4 ESCAPE  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LCTRL D  &hmls LEFT_SHIFT F  &kp G          &kp H        &hmrs RIGHT_SHIFT J  &hmr LCTRL K  &hmr LEFT_ALT L  &hmr LEFT_GUI SEMI  &kp SQT
 &sk LSHFT     &kp Z            &kp X            &kp C         &kp V               &mt QMARK B    &kp N        &kp M                &kp COMMA     &kp DOT          &kp FSLH            &kp ENTER
-                                                &kp MINUS     &lt 2 ENTER         &lt 1 SPACE    &lt 5 SPACE  &caps_word           &lt 6 LANG1
+                                                &caps_word    &lt 2 ENTER         &lt 1 SPACE    &lt 5 SPACE  &kp MINUS            &lt 6 LANG1
             >;
         };
 
@@ -244,10 +280,10 @@
 
         symbols {
             bindings = <
-&trans  &trans    &kp AT     &kp EXCL   &kp DQT    &kp LBKT    &kp RBKT  &kp AMPS  &kp ASTRK  &kp TILDE  &trans  &trans
-&trans  &trans    &kp HASH   &kp QMARK  &kp SQT    &kp LPAR    &kp RPAR  &kp DLLR  &kp PRCNT  &kp CARET  &trans  &trans
-&trans  &kp PIPE  &kp SLASH  &kp COLON  &kp GRAVE  &kp LBRC    &kp RBRC  &kp LT    &kp EQUAL  &kp GT     &trans  &trans
-                             &trans     &trans     &kp RET     &trans    &trans    &trans
+&trans  &trans     &kp AT     &kp EXCL   &kp DQT    &kp LBKT    &kp RBKT  &kp AMPS  &kp ASTRK  &kp TILDE  &trans  &trans
+&trans  &kp MINUS  &kp HASH   &kp QMARK  &kp SQT    &kp LPAR    &kp RPAR  &kp DLLR  &kp PRCNT  &kp CARET  &trans  &trans
+&trans  &kp PIPE   &kp SLASH  &kp COLON  &kp GRAVE  &kp LBRC    &kp RBRC  &kp LT    &kp EQUAL  &kp GT     &trans  &trans
+                              &trans     &trans     &kp RET     &trans    &trans    &trans
             >;
         };
 

@@ -245,8 +245,8 @@
         navigation {
             bindings = <
 &kp PRINTSCREEN  &kp LS(LC(C))       &kp LS(TAB)          &kp SPACE            &kp TAB               &kp LA(TAB)      &kp LEFT_PARENTHESIS  &kp BSPC   &kp UP     &kp DEL    &kp RPAR  &trans
-&trans           &kp LG(Y)           &mt LEFT_ALT ESCAPE  &mt LCTRL BACKSPACE  &mt LEFT_SHIFT ENTER  &kp LC(D)        &kp HOME              &kp LEFT   &kp DOWN   &kp RIGHT  &kp END   &trans
-&trans           &kp LC(LA(LG(N0)))  &kp LC(Y)            &kp LC(Z)            &kp DEL               &kp LS(LC(D))    &kp COLON             &kp LC(C)  &kp LC(V)  &kp LC(X)  &trans    &trans
+&kp UP_ARROW     &kp LG(Y)           &mt LEFT_ALT ESCAPE  &mt LCTRL BACKSPACE  &mt LEFT_SHIFT ENTER  &kp LC(D)        &kp HOME              &kp LEFT   &kp DOWN   &kp RIGHT  &kp END   &trans
+&kp RIGHT        &kp LC(LA(LG(N0)))  &kp LC(Y)            &kp LC(Z)            &kp DEL               &kp LS(LC(D))    &kp COLON             &kp LC(C)  &kp LC(V)  &kp LC(X)  &trans    &trans
                                                           &trans               &trans                &trans           &ques_enter           &trans     &trans
             >;
         };
